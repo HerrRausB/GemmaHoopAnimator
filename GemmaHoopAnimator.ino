@@ -93,7 +93,7 @@ uint8_t  spectrum_part = 0,
          curr_color_gen = COL_RANDOM, 
          idx = 0, 
          offset = 0, 
-         action_color_idx = 0, 
+         number_of_actions = 0, 
          curr_action_idx = 0, 
          curr_color_granularity = 1;
 
@@ -120,7 +120,7 @@ void setup()
   // we need to know, how many actions are defined - shall the there be too
   // many actions defined, the RAM will overflow and he µC won't do anything
   // --> rather easy diagnosis ;-)
-  action_color_idx = sizeof (theActionList) / sizeof (actiondesc);
+  number_of_actions = sizeof (theActionList) / sizeof (actiondesc);
   
   // let's go!
   pixels.begin();
@@ -150,7 +150,7 @@ void loop()
     
     curr_action_idx++;
     // take care to rotate the action list!
-    curr_action_idx %= action_color_idx; 
+    curr_action_idx %= number_of_actions; 
 
     action_timer = millis();
   }
