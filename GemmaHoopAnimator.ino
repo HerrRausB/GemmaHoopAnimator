@@ -58,8 +58,8 @@
  * - speed wipes per action, which would reduce the number
  *   of actions to be defined for seamless speed changes
  *
- * as i designed this for the gemma hoops as suggested on adafruits web page
- * there seems to be no suitable way of connecting an external torage device
+ * as i designed this for the gemma hoops as suggested on adafruit's web page
+ * there seems to be no suitable way of connecting an external storage device
  * 
  ******************************************************************************/
 
